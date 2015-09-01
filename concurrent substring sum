@@ -1,0 +1,16 @@
+//Little code snippit to find largest sum of concurrent 
+//and nonnegitive subset of numbers in an ordered list
+nice_sol(list a){
+	cur_max = 0
+	count_max = 0
+	index = 0
+	
+	while(index < length(a)){
+		if(count_max <= 0)
+			count_max = a[index++]
+		else
+			count_max += a[index++]
+		if(count_max > cur_max)
+			cur_max = count_max
+	}
+}
